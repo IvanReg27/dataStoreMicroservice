@@ -1,9 +1,9 @@
 package com.example.datastoremicroservice.web.controller;
 
-import com.example.datastoremicroservice.service.SummaryService;
 import com.example.datastoremicroservice.model.MeasurementType;
 import com.example.datastoremicroservice.model.Summary;
 import com.example.datastoremicroservice.model.SummaryType;
+import com.example.datastoremicroservice.service.SummaryService;
 import com.example.datastoremicroservice.web.dto.SummaryDto;
 import com.example.datastoremicroservice.web.dto.SummaryMapper;
 import lombok.RequiredArgsConstructor;

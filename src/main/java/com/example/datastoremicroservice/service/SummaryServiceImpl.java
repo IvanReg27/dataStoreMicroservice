@@ -1,10 +1,11 @@
 package com.example.datastoremicroservice.service;
 
-import com.example.datastoremicroservice.repository.SummaryRepository;
+import com.example.datastoremicroservice.model.Data;
 import com.example.datastoremicroservice.model.MeasurementType;
 import com.example.datastoremicroservice.model.Summary;
 import com.example.datastoremicroservice.model.SummaryType;
 import com.example.datastoremicroservice.model.exception.SensorNotFoundException;
+import com.example.datastoremicroservice.repository.SummaryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,5 +29,9 @@ public class SummaryServiceImpl implements SummaryService {
                         summaryTypes == null ? Set.of(SummaryType.values()) : summaryTypes
                 )
                 .orElseThrow(SensorNotFoundException::new);
+    }
+    @Override
+    public void handle(Data data) {
+        summaryRepository.handle(data);
     }
 }
